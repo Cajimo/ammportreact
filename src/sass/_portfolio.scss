@@ -1,0 +1,58 @@
+.portfolio {
+  /* grid-row: 2 / 3;
+  grid-column: center-start / center-end; */
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+  //margin-top: 5rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  //"autofit" permite crear cuantas columnas quepan con las condiciones en "minmax()"
+  justify-content: center;
+  //align-content: center;
+  grid-gap: 2rem;
+
+  &__contenido {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+    transition: all 0.2s;
+    box-shadow: $sombra-clara;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+  &__img {
+    width: 100%;
+    //height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 4rem;
+  }
+
+  a:hover {
+    transition: all 0.2s;
+    box-shadow: $sombra-azul;
+    transform: scale(1.01);
+  }
+
+  figcaption {
+    grid-row: 2 / -1;
+    align-self: start;
+
+    font-family: $primaria;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $gris-claro-1;
+    text-transform: uppercase;
+    padding: 2rem;
+    background-color: $secundario;
+  }
+
+  @media only screen and(max-width:$bp-grande) {
+    grid-row: 3 / 4;
+  }
+}

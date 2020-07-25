@@ -1,0 +1,111 @@
+.testimonios {
+  /* grid-row: 3 / 4;
+  grid-column: center-start / center-end; */
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+
+  display: grid;
+  //grid-template-rows: repeat(fit-content, minmax(min-content, max-content));
+  //grid-template-columns: minmax(15rem, 75vw);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 2rem;
+  //grid-template-columns: 1fr; //repeat(auto-fit, minmax(min-content, max-content));
+
+  .testimonio-1 {
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 25% 65%;
+    justify-content: center; //repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    box-shadow: $sombra-clara;
+
+    figure {
+      padding: 2rem;
+    }
+
+    &__fig {
+      grid-column: 1 / 2;
+    }
+    &__coment {
+      grid-column: 2 / 3;
+    }
+  }
+
+  .testimonio-2 {
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 25% 65%;
+    justify-content: center; //repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    box-shadow: $sombra-clara;
+
+    figure {
+      padding: 2rem;
+    }
+
+    &__fig {
+      grid-column: 1 / 2;
+    }
+    &__coment {
+      grid-column: 2 / 3;
+    }
+  }
+
+  .testimonio-3 {
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-template-columns: 25% 65%;
+    justify-content: center; //repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    box-shadow: $sombra-clara;
+
+    figure {
+      padding: 2rem;
+    }
+
+    &__fig {
+      grid-column: 1 / 2;
+    }
+    &__coment {
+      grid-column: 2 / 3;
+    }
+  }
+
+  //Responsivo
+  @media only screen and(max-width:$bp-grande) {
+    grid-row: 4 / 5;
+  }
+}
+
+.testimonio-img {
+  width: 100%;
+  border-radius: 50%;
+}
+.testimonio-info {
+  font-size: 1.2rem;
+  font-family: $display;
+  text-transform: uppercase;
+  color: $secundario;
+  text-align: center;
+  padding: 2rem 0;
+  @media only screen and(max-width: $bp-grande) {
+    text-align: left;
+  }
+}
+.testimonio-coment {
+  font-size: 1.5rem;
+  @media only screen and(max-width: $bp-grande) {
+    padding: 3rem;
+  }
+}

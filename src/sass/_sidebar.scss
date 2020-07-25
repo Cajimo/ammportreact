@@ -1,0 +1,91 @@
+.sidebar {
+  grid-row: 1 / 5;
+  grid-column: sidebar-start / sidebar-end;
+
+  display: grid;
+  grid-template-rows: 20vh 1fr;
+
+  &__icon {
+    grid-row: 1 / 2;
+
+    @media only screen and (max-width: $bp-grande) {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__icon-logo {
+    width: 10rem;
+    height: 10rem;
+    position: fixed;
+    display: block;
+    margin: 3rem 0 0 5rem;
+
+    @media only screen and(max-width: $bp-grande) {
+      position: absolute;
+      width: 7vh;
+      height: 7vh;
+      margin: 3rem 0 0 3rem;
+    }
+  }
+  &__icon-logo:hover {
+    transform: translateY(-3px);
+  }
+
+  &__menu {
+    grid-row: 2 / 3;
+
+    @media only screen and (max-width: $bp-grande) {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+
+    &-nav {
+      position: fixed;
+      margin-top: 15rem;
+      margin-left: 5rem;
+      display: block;
+      list-style: none;
+
+      &--item {
+        //padding-bottom: 2rem;
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+        &-link {
+          font-size: 1.5rem;
+          //text-transform: uppercase;
+          //text-decoration: none;
+        }
+        &-link:link,
+        &-link:visited {
+          color: $gris-osc-2;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          display: block;
+          padding: 1.5rem;
+          position: relative;
+          z-index: 10;
+          transition: all 0.2s;
+        }
+        &-link:hover,
+        &-link:active {
+          //color: $gris-claro-4;
+          color: $secundario;
+          //transform: translateY(-3px);
+        }
+      }
+      @media only screen and (max-width: $bp-grande) {
+        visibility: hidden;
+      }
+    }
+  }
+  @media only screen and (max-width: $bp-grande) {
+    //1rem = 8px
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    //box-shadow: $sombra-azul;
+  }
+}

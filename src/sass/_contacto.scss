@@ -1,0 +1,10 @@
+.contacto {
+  /* grid-row: 4 / 5;
+  grid-column: center-start / center-end; */
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+
+  @media only screen and(max-width:$bp-grande) {
+    grid-row: 5 / 6;
+  }
+}

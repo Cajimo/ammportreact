@@ -1,0 +1,111 @@
+//colores
+$primario: #0a809a;
+$secundario: #c1dbd7;
+$gris-claro-1: #faf9f9;
+$gris-claro-2: #f4f2f2;
+$gris-claro-3: #f0eeee;
+$gris-claro-4: #ccc;
+$gris-osc-1: #333;
+$gris-osc-2: #777;
+$gris-osc-3: #999;
+
+//fuentes
+$primaria: 'Montserrat', sans-serif;
+$display: 'Montserrat', sans-serif;
+/* $primaria: 'Nunito', sans-serif;
+$display: 'Crimson Text', serif; */
+
+//sombras
+$sombra-clara: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+$sombra-osc: 0 2rem 5rem rgba(0, 0, 0, 0.6);
+$sombra-azul: 0 1rem 2rem rgba($primario, 0.2);
+
+//linea
+$linea: 1px solid $gris-claro-2;
+
+//PUNTOS DE QUIEBRA RESPONSIVOS
+$bp-mas-grande: 75em; //1200/16 = 75em
+$bp-grande: 53.125em; //850/16 = 53.125em
+$bp-mediano: 37.5rem; //600/16 = 37.5em
+$bp-peque: 34em; //544/16 = 34em
+
+* {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+}
+
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  scroll-behavior: smooth;
+
+  @media only screen and(max-width: $bp-mas-grande) {
+    font-size: 50%;
+  }
+  @media only screen and(max-width: $bp-mediano) {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: $primaria;
+  color: $gris-osc-1;
+  font-weight: 300;
+  line-height: 1.6;
+  background-image: linear-gradient(
+    to right bottom,
+    $gris-claro-1,
+    $gris-claro-3
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  //min-height: 100vh;
+
+  svg {
+    width: 30vw;
+    align-self: center;
+    justify-self: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.container {
+  display: grid;
+  grid-row-gap: 5rem;
+  grid-template-rows: 80vh repeat(5, min-content);
+  grid-template-columns:
+    [sidebar-start] 20rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-grande) {
+    //1rem = 8px
+    grid-row-gap: 3rem;
+    grid-template-rows: 9rem 60vh repeat(5, min-content);
+    grid-template-columns:
+      [full-start] minmax(10rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
