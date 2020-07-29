@@ -1,0 +1,58 @@
+export default [
+  {
+    title: 'Logo Rte. La Posada del Genil',
+    category: 'Identidad Corporativa',
+    description: 'Imagotipo para restaurante al lado del Río Genil.',
+    avatarSrc: require('../assets/imgs/logoPosada.png'),
+    imgSrc: require('../assets/imgs/logoPosada.png'),
+  },
+  {
+    title: 'Sitio Web Rte. La Posada del Genil',
+    category: 'Desarrollo y Diseño Web',
+    description: 'Canal de publicidad y posicionamiento web.',
+    avatarSrc: require('../assets/imgs/logoPosada.png'),
+    imgSrc: require('../assets/imgs/laposadaWeb.jpg'),
+  },
+  {
+    title: 'Cartel Evento Rte. La Posada del Genil',
+    category: 'Diseño Gráfico',
+    description: 'Cartel publicitario para evento en local.',
+    avatarSrc: require('../assets/imgs/logoPosada.png'),
+    imgSrc: require('../assets/imgs/cartelLaposada.png'),
+  },
+  {
+    title: 'Logo Empresarios Granada',
+    category: 'Identidad Corporativa',
+    description: 'Imagotipo para Grupo de NetWorking.',
+    avatarSrc: require('../assets/imgs/logoEmpresarios.png'),
+    imgSrc: require('../assets/imgs/logoEmpresarios.png'),
+  },
+  {
+    title: 'Tienda Online Dynatol Andalucía',
+    category: 'Desarrollo y Diseño Web',
+    description: 'Canal de venta y publicidad',
+    avatarSrc: 'TO',
+    imgSrc: require('../assets/imgs/dynatolWeb.jpg'),
+  },
+  {
+    title: 'Portada CD Colegio San Juan de Ávila',
+    category: 'Diseño Gráfico',
+    description: 'Portada y contra portada para CD musical.',
+    avatarSrc: require('../assets/imgs/portadaCd.jpg'),
+    imgSrc: require('../assets/imgs/portadaCd.jpg'),
+  },
+  {
+    title: '',
+    category: '',
+    description: '',
+    avatarSrc: '',
+    imgSrc: '',
+  },
+  {
+    title: '',
+    category: '',
+    description: '',
+    avatarSrc: '',
+    imgSrc: '',
+  },
+];
