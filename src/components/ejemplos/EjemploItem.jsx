@@ -7,8 +7,10 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Avatar, IconButton } from '@material-ui/core';
+import { Avatar, IconButton, ThemeProvider } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+
+import Estilos from '../../theme/Estilos';
 
 const useStyles = makeStyles({
   root: {
@@ -29,7 +31,6 @@ const useStyles = makeStyles({
 
 const EjemploItem = (props) => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
   const { avatarSrc, title, category, description, imgSrc } = props;
   return (
     <Card>
