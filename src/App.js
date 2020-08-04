@@ -4,9 +4,6 @@ import Header from './components/layout/Header';
 import Ejemplos from './components/ejemplos/Ejemplos';
 //import Home from './components/pages/Home';
 
-/* import '../src/sass/main.scss'; */
-import Estilos from '../src/theme/Estilos';
-
 const App = () => {
   return (
     <Grid container direction="column">

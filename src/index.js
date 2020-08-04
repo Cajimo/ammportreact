@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Estilos from './theme/Estilos';
 
 // Creando el theme
@@ -12,12 +13,14 @@ import Estilos from './theme/Estilos';
     },
   },
 }); */
-const Theme = Estilos;
+const theme = Estilos;
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={Theme}>
-      <App />
+    <ThemeProvider theme={theme}>
+      <CssBaseline>
+        <App />
+      </CssBaseline>
     </ThemeProvider>
   </React.StrictMode>,
 
